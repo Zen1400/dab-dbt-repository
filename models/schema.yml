@@ -9,7 +9,7 @@ sources:
         columns:
           - name: pk
             tests:
-              - unique:
+              - unique
                   
       - name: product
         identifier: raw_gz_product
