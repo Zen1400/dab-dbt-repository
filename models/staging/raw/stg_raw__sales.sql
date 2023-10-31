@@ -18,4 +18,4 @@ renamed as (
 
 )
 
-select * from renamed
+select *, Concat(orders_id, '-', products_id) from renamed
