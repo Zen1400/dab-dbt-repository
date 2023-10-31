@@ -9,7 +9,8 @@ sources:
         columns:
           - name: pk
             tests:
-              - unique
+              - unique:
+                pk: Concat(orders_id, '-', products_id)
                   
       - name: product
         identifier: raw_gz_product

@@ -12,11 +12,10 @@ renamed as (
             orders_id,
             pdt_id as products_id,
             revenue,
-            quantity, 
-            Concat(orders_id, '-', products_id) AS pk
+            quantity
 
     from source
 
 )
 
-select * from renamed
+select *,    Concat(orders_id, '-', products_id) AS pk from renamed
