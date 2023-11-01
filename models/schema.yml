@@ -7,7 +7,7 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         columns:
-          - name: concat(orders_id, '-', products_id)
+          - name: concat(orders_id, '-', pdt_id)
             tests:
             - unique
                 
