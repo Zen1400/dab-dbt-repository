@@ -2,11 +2,31 @@ version: 2
 
 sources:
   - name: raw
-    schema: gz_raw_data
+    schema: test
     tables:
       - name: sales
         identifier: raw_gz_sales
+        columns:
+          - name: concat(orders_id, '-', pdt_id)
+            tests:
+            - unique
+                
+           
+            
+                  
       - name: product
         identifier: raw_gz_product
+        columns:
+          - name: products_id
+            tests:
+              - not_null
+              - unique
+                  
       - name: ships
         identifier: raw_gz_ship
+        columns:
+          - name: orders_id
+            tests:
+            - not_null
+            - unique
+                
